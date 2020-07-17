@@ -5,41 +5,451 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae: Ricky Indra Djunawan</title>
     <style>
-        #cv_title
+        html
+        {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .title
         {
             color:white;
-            background-color: royalblue;
+            background-color: black;
             font-family: 'Times New Roman', Times, serif;
+            position:fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-left: 15px;
+            z-index: 5000;
+            display: inline-flex;
         }
+
+        #table_of_contents
+        {
+            padding-left: 15px;
+            position: absolute;
+            padding-top:75px;
+        }
+
+        .download_button
+        {
+            vertical-align: text-bottom;
+        }
+
+        td
+        {
+            padding: 0 15px;
+        }
+
+        body
+        {
+            background-color: rgb(50, 50, 50);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            position:absolute;
+        }
+
+        #td_bio_text
+        {
+            vertical-align: top;
+
+        }
+
+        .information_section
+        {
+            position:relative;
+            top: 275px;
+
+        }
+
+        .h2_title
+        {
+            padding-left: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:1.5em;
+            position: relative;
+            padding-top: 100px;
+            margin-top: -50px;
+        }
+
+        .h3_title
+        {
+            padding:0 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:1.25em;
+        }
+
+        a:link, a:visited
+        {
+            color:white;
+        }
+
+        a:hover
+        {
+            color:silver;
+        }
+
+        .education_tb, .exp_tb
+        {
+            border: 3px solid;
+            border-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .education_tbh, .education_tbd, .exp_tbh, .exp_tbd 
+        {
+            border: 1px solid;
+            border-color: white;
+        }
+
+        .skills_interests_body
+        {
+            margin-left: 100px;
+        }
+
+        #back_top_button
+        {
+            display: none;
+            bottom: 15px;
+            right: 15px;
+            position: fixed;
+            z-index: 100;
+
+        }
+
     </style>
 </head>
-<h1 id="cv_title">
-    Curriculum Vitae
-</h1>
+<div class="title">
+    <h1 id="cv_title">
+        Curriculum Vitae
+        <a target="_blank" href="downloadable_files/CV-Ricky_v0.3.docx"><img class="download_button" src="images/doc_icon.png" height="35" alt="download_doc"></a>
+        <a target="_blank" href="downloadable_files/CV-Ricky_v0.3.pdf"><img class="download_button" src="images/pdf_icon.png" height="35" alt="download_pdf"></a>
+    </h1>
+</div>
 
-<h2 class="h2_title">
-    Personal Information
-</h2>
+<div id="table_of_contents">
+    <h2>
+        Table of contents<br>
+    </h2>
+    <body>
+        <ul>
+            <li><a href="#personal_info">Personal Information</a></li>
+            <li><a href="#educational_background">Educational Background</a></li>
+            <li><a href="#skills_interests">Skills and Interensts</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+        </ul>
+    </body>
+</div>
 
 
-<body>
-    Name: Ricky Indra Djunawan <br>
-    Gender: Male <br>
-    Permanent Address: Jl. Surya Utama Blok IIN/8, Kedoya Utara, Jakarta Barat, Jakarta. Postal Code: 11520 <br>
-    Contact Number: (+62)851 3240 0088 <br>
-    E-mail Address: ricky.indra@hotmail.com <br>
-    Nationality: Indonesia <br>
-    Place/Date of birth: Jakarta / December 6th 1992 <br>
-</body>
+<div class=information_section>
+    <h2 class="h2_title" id="personal_info">
+        Personal Information
+    </h2>
 
-<h2 class="h2_title">
+
+    <body>
+        <table>
+            <tbody>
+                <td>
+                    <img src="images/3.5x4.5.jpg" width="175" height="225" alt="my_picture">
+                </td>
+                <td id="td_bio_text">
+                    Name: Ricky Indra Djunawan <br>
+                    Gender: Male <br>
+                    Permanent Address: Jl. Surya Utama Blok IIN/8, Kedoya Utara, Jakarta Barat, Jakarta. Postal Code: 11520 <br>
+                    Contact Number: (+62)851 3240 0088 <br>
+                    E-mail Address: ricky.indra@hotmail.com <br>
+                    Nationality: Indonesia <br>
+                    Place/Date of birth: Jakarta / December 6th 1992 <br>
+                </td>
+            </tbody>
+        </table>
+
+
+    </body>
+
+
+
+<h2 class="h2_title" id="educational_background">
     Educational Background
 </h2>
 
+<h3 class="h3_title">
+    Formal Education
+</h3>
 <body>
-    <table>
-        
+    <table class="education_tb">
+        <thead>
+            <tr>
+                <th class="education_tbh">Level</th>
+                <th class="education_tbh">Place</th>
+                <th class="education_tbh">Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="education_tbd">Kindergarten</td>
+                <td class="education_tbd">TK Kemurnian II, Jakarta</td>
+                <td class="education_tbd">1996-1999</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Elementary School</td>
+                <td class="education_tbd">SD Kemurnian II, Jakarta</td>
+                <td class="education_tbd">1999-2005</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Junior High School</td>
+                <td class="education_tbd">SMP IPEKA Tomang II, Jakarta</td>
+                <td class="education_tbd">2005-2008</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Senior High School</td>
+                <td class="education_tbd">SMA IPEKA Tomang II, Jakarta</td>
+                <td class="education_tbd">2008-2009</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Senior High School</td>
+                <td class="education_tbd">SMA Ketapang II, Jakarta</td>
+                <td class="education_tbd">2009-2011</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Senior High School</td>
+                <td class="education_tbd">Universitas Indonesia, Depok</td>
+                <td class="education_tbd">2011-2016</td>
+            </tr>
+            <tr>
+                <td class="education_tbd">Senior High School</td>
+                <td class="education_tbd">National Taiwan University of Science and Technology, Taipei</td>
+                <td class="education_tbd">2018-Present</td>
+            </tr>
+        </tbody>
     </table>
 </body>
+
+<h3 class="h3_title">
+    Informal Education
+</h3>
+<body>
+        <table class="education_tb">
+            <thead>
+                <tr>
+                    <th class="education_tbh">Type</th>
+                    <th class="education_tbh">Place</th>
+                    <th class="education_tbh">Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="education_tbd">English Language</td>
+                    <td class="education_tbd">Eloquensi Language Center, Jakarta</td>
+                    <td class="education_tbd">2004-2011</td>
+                </tr>
+                <tr>
+                    <td class="education_tbd">English Language</td>
+                    <td class="education_tbd">Self study</td>
+                    <td class="education_tbd">2011-Present</td>
+                </tr>
+                <tr>
+                    <td class="education_tbd">Chinese Language</td>
+                    <td class="education_tbd">Mandarin Study and Culture Center - MingChuan University, Taipei</td>
+                    <td class="education_tbd">2017-2018</td>
+                </tr>
+                <tr>
+                    <td class="education_tbd">Badminton</td>
+                    <td class="education_tbd">PB Bintang, Jakarta</td>
+                    <td class="education_tbd">2005-2011</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+<h2 class="h2_title" id="skills_interests">
+    Skills and Interests
+</h2>
+<h3 class="h3_title">
+    Language
+</h3>
+<body class="skills_interests_body">
+    <ol>
+        <li>Indonesian Language - Mother Language</li>
+        <li>English Language - Intermediate</li>
+        <li>Chinese Language - Novice</li>
+    </ol>
+</body>
+<h3 class="h3_title">
+    Mechanical Engineering
+</h3>
+<body class="skills_interests_body">
+    Specialty
+    <ol>
+        <li>Production and Manufacturing</li>
+        <li>Quality Control and Analysis</li>
+        <li>Micro Fabrication Technology</li>
+    </ol>
+    Tools
+    <ol>
+        <li>Autodesk Inventor</li>
+        <li>Solidworks</li>
+        <li>UG Siemens NX</li>
+    </ol>
+</body>
+<h3 class="h3_title">
+    Computer Programming
+</h3>
+<body class="skills_interests_body">
+    Specialty
+    <ol>
+        <li>Data Analysis</li>
+        <li>Machine Learning</li>
+        <li>Digital Image Processing</li>
+    </ol>
+    Tools
+    <ol>
+        <li>Python</li>
+        <li>C/C++</li>
+        <li>Javascript</li>
+    </ol>
+</body>
+<h3 class="h3_title">
+    Other Skills
+</h3>
+<body class="skills_interests_body">
+    <ol>
+        <li>Ms. Office (Word, Excel, PowerPoint, etc)</li>
+        <li>Adobe (Photoshop, Illustrator)</li>
+        <li>HTML & CSS</li>
+    </ol>
+</body>
+<h3 class="h3_title">
+    Hobbies
+</h3>
+<body class="skills_interests_body">
+    <ol>
+        <li>Reading Novels</li>
+        <li>Drawing Cartoons</li>
+        <li>Playing Computer Games</li>
+        <li>Browsing Memes</li>
+    </ol>
+</body>
+
+<h2 class="h2_title" id="experiences">
+    Experiences
+</h2>
+<h3 class="h3_title">
+    Work
+</h3>
+<body>
+<table class="exp_tb">
+    <thead>
+        <tr>
+            <th class="exp_tbh">Year</th>
+            <th class="exp_tbh">Place</th>
+            <th class="exp_tbh">Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="exp_tbd">2014</td>
+            <td class="exp_tbd">PT. SANWA ENGINEERING INDONESIA</td>
+            <td class="exp_tbd">Internship</td>
+        </tr>
+        <tr>
+            <td class="exp_tbd">2015</td>
+            <td class="exp_tbd">Micro Fabrication Laboratory (Micro-milling) UI</td>
+            <td class="exp_tbd">Student/Researcher</td>
+        </tr>
+        <tr>
+            <td class="exp_tbd">2016</td>
+            <td class="exp_tbd">PT. SAMA SUKSES SADAYA</td>
+            <td class="exp_tbd">QC Supervisor</td>
+        </tr>
+        <tr>
+            <td class="exp_tbd">2018</td>
+            <td class="exp_tbd">PT. Telkomsel Telin Taiwan</td>
+            <td class="exp_tbd">Part-timer</td>
+        </tr>
+        <tr>
+            <td class="exp_tbd">2019</td>
+            <td class="exp_tbd">Computer Graphic Laboratory NTUST</td>
+            <td class="exp_tbd">Student/Researcher</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+<h3 class="h3_title">
+    Organization
+</h3>
+<body>
+    <table class="exp_tb">
+        <thead>
+            <tr>
+                <th class="exp_tbh">Year</th>
+                <th class="exp_tbh">Organization</th>
+                <th class="exp_tbh">Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="exp_tbd">2011</td>
+                <td class="exp_tbd">Malam Keakraban (Makrab) KMBUI</td>
+                <td class="exp_tbd">Supervisor of Foods and Beverages</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2012</td>
+                <td class="exp_tbd">Children's Day TIS</td>
+                <td class="exp_tbd">Staff of Supply and Equipment</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2012</td>
+                <td class="exp_tbd">Kathina Day KMBUI</td>
+                <td class="exp_tbd">Staff of Publication</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2012- 2013</td>
+                <td class="exp_tbd">PARAMITA Magazine</td>
+                <td class="exp_tbd">Head of Design Team</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2013</td>
+                <td class="exp_tbd">Journalism Training PARAMITA</td>
+                <td class="exp_tbd">Supervisor of Supply and Equipment</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2013</td>
+                <td class="exp_tbd">Freshmen Student Admission</td>
+                <td class="exp_tbd">Supervisor of Publication and Documentation</td>
+            </tr>
+            <tr>
+                <td class="exp_tbd">2018-2019</td>
+                <td class="exp_tbd">INDONESIAN CULTURE EXHIBITION NTUST</td>
+                <td class="exp_tbd">Head of Registration and Souvenir Division</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</div>
+
+<a onclick="topFunction()" id="back_top_button"><img src="images/back_to_top.png" width="50" height="50"></a>
+
+<script>
+    var myButton = document.getElementById("back_top_button");
+    window.onscroll = function(){scrollFunction()};
+
+    function scrollFunction()
+    {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+        {myButton.style.display = "block";} else {myButton.style.display = "none";}
+    }
+
+    function topFunction()
+    {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 
 </html>
