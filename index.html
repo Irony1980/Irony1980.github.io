@@ -1,451 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae: Ricky Indra Djunawan</title>
+    <meta name="description" content="Ricky's Bio">
+    <meta name="keywords" content="Ricky, Ricky Indra, Ricky Indra Djunawan">
+    <meta name="author" content="Ricky Indra Djunawan">
+    <meta name="viewport" content="width=1024, initial-scale=1.0, shrink-to-fit=yes">
+    <link rel="shortcut icon" type="image" href="./images/dino.ico"/>
+    <title>Ricky Indra Djunawan</title>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Popper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha512-Ua/7Woz9L5O0cwB/aYexmgoaD7lw3dWe9FvXejVdgqu71gRog3oJgjSWQR55fwWx+WKuk8cl7UwA1RS6QCadFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--FontAwesome JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--FontAwesome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--static dependencies-->
+    <script src="./js/pace/pace.min.js"></script>
+    <link rel="stylesheet" href="./js/pace/flash.css" type="text/css">
+    <script>
+        Pace.options = {
+            ajax: false
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/bio.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
     <style>
-        html
-        {
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-
-        .title
-        {
-            color:white;
-            background-color: black;
-            font-family: 'Times New Roman', Times, serif;
-            position:fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding-left: 15px;
-            z-index: 5000;
-            display: inline-flex;
-        }
-
-        #table_of_contents
-        {
-            padding-left: 15px;
-            position: absolute;
-            padding-top:75px;
-        }
-
-        .download_button
-        {
-            vertical-align: text-bottom;
-        }
-
-        td
-        {
-            padding: 0 15px;
-        }
-
-        body
-        {
-            background-color: rgb(50, 50, 50);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            color: white;
-            position:absolute;
-        }
-
-        #td_bio_text
-        {
-            vertical-align: top;
-
-        }
-
-        .information_section
-        {
-            position:relative;
-            top: 275px;
-
-        }
-
-        .h2_title
-        {
-            padding-left: 15px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size:1.5em;
-            position: relative;
-            padding-top: 100px;
-            margin-top: -50px;
-        }
-
-        .h3_title
-        {
-            padding:0 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size:1.25em;
-        }
-
-        a:link, a:visited
-        {
-            color:white;
-        }
-
-        a:hover
-        {
-            color:silver;
-        }
-
-        .education_tb, .exp_tb
-        {
-            border: 3px solid;
-            border-color: white;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .education_tbh, .education_tbd, .exp_tbh, .exp_tbd 
-        {
-            border: 1px solid;
-            border-color: white;
-        }
-
-        p
-        {
-            padding-left: 20px;
-        }
-
-        #back_top_button
-        {
+        #back_top_button{
             display: none;
             bottom: 15px;
             right: 15px;
             position: fixed;
             z-index: 100;
+        }
+    </style>
+</head>
 
+<body>
+    <div class="background" style="background-image: url('./images/background/5305323.jpg');"></div>
+
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color:rgba(179, 224, 242, 0.6)">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#" style="font-size: 30px; font-weight:bold">Ricky Indra Djunawan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-md-5" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#profile">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="./project/project_menu.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <div class="frame" style="background-image:url('./images/frame-bg.png')">
+            <div class="d-flex flex-column photo-box">
+                <div class="photo-circle"></div>
+                <div class="text-center mt-3 mb-5">
+                    <h3>Ricky Indra</h3>
+                    <a class="phone_and_email" href="tel:+62859106534446">(+62) 859-1065-34446</a><span> / </span><a class="phone_and_email" href="tel:+6281510007030">(+62) 815-1000-7030</a>
+                    <a class="phone_and_email" href="mailto:ricky.indra@hotmail.com">ricky.indra@hotmail.com</a>
+                </div>
+                <div class="mt-auto" style="background-color:lightgrey">
+                    <div class="row m-2">
+                        <div class="col-2"><a href="https://www.facebook.com/ricky.indra1980/"><i class="fa-brands fa-square-facebook fa-2xl social_media_icons"></i></a></div>
+                        <div class="col-2"><a href="https://www.linkedin.com/in/ricky-indra-30644411b/"><i class="fa-brands fa-linkedin fa-2xl social_media_icons"></i></a></div>
+                        <div class="col-2"><a href="https://github.com/it-sanwa-ei"><i class="fa-brands fa-github fa-2xl social_media_icons"></i></a></div>
+                        <div class="col-2"><a href="https://stackoverflow.com/users/12268127/ricky"><i class="fa-brands fa-stack-overflow fa-2xl social_media_icons"></i></a></div>
+                        <div class="col-2"><a href="https://line.me/ti/p/~rickyindra"><i class="fa-brands fa-line fa-2xl social_media_icons"></i></a></div>
+                        <div class="col-2"><a href="https://discord.com/users/264823687088177172"><i class="fa-brands fa-discord fa-2xl social_media_icons"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column skill-box">
+                <div class="my-auto slideshow-container">
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">Python</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">HTML</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">CSS</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">JavaScript</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">Django Framework</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">JQuery, Bootstrap, AJAX</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Git</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">PHP, C, C++</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9734; &#9734; &#9734;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">Photoshop</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Corel Draw</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Illustrator</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Aseprite</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">MS Word</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">MS Excel</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">MS PowerPoint</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">MS Visio</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">Autodesk AutoCAD</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Autodesk Inventor</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">SolidWorks</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Siemens NX</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skillset-slide fade-ss">
+                        <ul class="mt-4 ms-4">
+                            <li class="skillset-list">
+                                <div class="skillset">Indonesian Language</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">English Language</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                            </li>
+                            <li class="skillset-list">
+                                <div class="skillset">Chinese Language</div>
+                                <div class="skillset-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a style="text-decoration: none;" class="prev" onclick="plusSlides(-1)">&#139;</a>
+                    <a style="text-decoration: none;" class="next" onclick="plusSlides(1)">&#155;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div id="profile" style="border-bottom: 1px solid black">
+            <h2>Profile</h2>
+        </div>
+        <div class="my-3">
+            <p class="profile-summary">
+                Graduated with a Mechanical Engineering degree from the best University in Indonesia, I am confident with my
+                analytical thinking and problem-solving capabilities. Being involved in plastic injection molding industry for
+                quite a long time, I witness the advances in the manufacturing system. With the goal of utilizing IoT system to
+                improve production capabilities, I began my journey in computer programming.
+            </p>
+            <p class="profile-summary">
+                At first, I started with C programming language and learn the basic to program a microcontroller. Then I moved to
+                Python programming language to learn data processing, simple UI design with Tkinter and PyQt, digital image processing,
+                and some basic machine learning algorithms. Although now I end up mostly writing web development code using Django Framework,
+                I am still looking for other subjects to learn in order to achieve my goal.
+            </p>
+            <p class="profile-summary">
+                Along with this opportunity, I also pick up several expertise like maintaining a Linux based server using UNIX command line and
+                developing a visually appealing site with interactive interface using HTML, CSS and JavaScript. To ensure the transaction
+                of data between client and server remain fast and smooth, I also applied several AJAX techniques in the website I developed.
+            </p>
+            <p class="profile-summary">
+                Passionate about staying up to date with emerging trends and technologies, I actively seek out learning opportunities and experiment
+                with new tools and frameworks to enhance my skill set. If you are seeking a dedicated and versatile programmer who is always thrilled
+                with challenges while able to complete them well on time, I am confident that my technical expertise and commitment to excellence will suit your needs.
+            </p>
+        </div>
+
+
+        <div id="education" style="border-bottom: 1px solid black">
+            <h2>Education</h2>
+        </div>
+        <div class="my-3">
+            <h5>Universitas Indonesia</h5>
+            <h6 style="font-weight:normal;">Bachelor of Mechanical Engineering - Graduated 2016 </h6>
+        </div>
+
+
+        <div id="experiences" style="border-bottom: 1px solid black">
+            <h2>Experiences</h2>
+        </div>
+        <div class="my-3">
+            <h5>PT. Sanwa Engineering Indonesia</h5>
+            <h6 style="font-weight:normal;">Internship (2014)</h6>
+            <br>
+            <h5>PT. Sama Sukses Sadaya</h5>
+            <h6 style="font-weight:normal;">Production Supervisor (2020 - 2022)</h6>
+            <br>
+            <h5>PT. Sanwa Engineering Indonesia</h5>
+            <h6 style="font-weight:normal;">Fullstack & Software Developer (2022 - Present)</h6>
+        </div>
+        
+        
+        <div id="organization" style="border-bottom: 1px solid black">
+            <h2>Organization</h2>
+        </div>
+        <div class="my-3">
+            <h5>Indonesian Culture Exhibition</h5>
+            <h6 style="font-weight: normal;">Taiwan (2018 - 2019)</h6>
+            <h5>Paramita Magazine</h5>
+            <h6 style="font-weight: normal;">Indonesia (2012 - 2013)</h6>
+        </div>
+
+        <div id="contact" style="border-bottom: 1px solid black">
+            <h2>Contact</h2>
+        </div>
+        <div class="my-3">
+            <table>
+                <tbody>
+                    <tr class="my-2 contact-data">
+                        <td width=10%><i class="fa-solid fa-location-dot fa-xl"></i></td>
+                        <td><a href="https://goo.gl/maps/Zwm3GcEekJPBTiKE7">
+                                Jl. Surya Utama II-N/8, Kedoya Utara, Kebon Jeruk
+                                <br>
+                                Jakarta Barat, 11520
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="my-2 contact-data">
+                        <td width="10%"><i class="fa-brands fa-whatsapp fa-xl"></i></td>
+                        <td><a href="https://api.whatsapp.com/send?phone=62859106534446">(+62) 859-1065-34446</a></td>    
+                    </tr>
+                    <tr class="my-2 contact-data">
+                        <td width="10%"><i class="fa-brands fa-telegram fa-xl"></i></td>
+                        <td><a href="https://t.me/rickyindra">(+62) 859-1065-34446</a></td>
+                    </tr>
+                    <tr class="my-2 contact-data">
+                        <td width=10%><i class="fa-solid fa-phone fa-xl"></i></td>
+                        <td><a href="tel:+62859106534446">(+62) 859-1065-34446</a> / <a href="tel:+6281510007030">(+62) 815-1000-7030</a></td>
+                    </tr>
+                    <tr class="my-2 contact-data">
+                        <td width="10%"><i class="fa-solid fa-envelope fa-xl"></i></td>
+                        <td><a href="mailto:ricky.indra@hotmail.com">ricky.indra@hotmail.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" style="background-color: rgba(135,206,235, 0.3); margin:0; padding:0;">
+        <div class="px-5 py-3">
+            <p style="font-size: 14px;">© 2022 by Ricky Indra Djunawan. All Rights Reserved.</p>
+            <p class="text-end" style="font-size: 12px;">Image by <a href="https://www.freepik.com/free-vector/gradient-hexagonal-background_13606990.htm#query=background&position=14&from_view=keyword&track=sph">Freepik</a></p>
+        </div>
+    </div>
+
+    <!--script untuk back to top button-->
+    <a onclick="topFunction()" id="back_top_button"><img src="images/back_to_top.png" width="50" height="50"></a>
+    <script>
+        var myButton = document.getElementById("back_top_button");
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction()
+        {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+            {myButton.style.display = "block";} else {myButton.style.display = "none";}
         }
 
-    </style>
-    
-</head>
-<body>
-<div class="title">
-    <h1 id="cv_title">
-        Curriculum Vitae
-        <a target="_blank" href="downloadable_files/CV-Ricky_v0.4.docx"><img class="download_button" src="images/doc_icon.png" height="35" alt="download_doc"></a>
-        <a target="_blank" href="downloadable_files/CV-Ricky_v0.4.pdf"><img class="download_button" src="images/pdf_icon.png" height="35" alt="download_pdf"></a>
-    </h1>
-</div>
+        function topFunction()
+        {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
-<div id="table_of_contents">
-    <h2>
-        Table of contents<br>
-    </h2>
-    <p>
-        <ul>
-            <li><a href="#personal_info">Personal Information</a></li>
-            <li><a href="#educational_background">Educational Background</a></li>
-            <li><a href="#skills_interests">Skills and Interensts</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-        </ul>
-    </p>
-</div>
+    <!--script untuk slideshow skillsets-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-<div class=information_section>
-    <h2 class="h2_title" id="personal_info">
-        Personal Information
-    </h2>
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-
-    <p>
-        <table>
-            <tbody>
-                <td>
-                    <img src="images/3.5x4.5.jpg" width="175" height="225" alt="my_picture">
-                </td>
-                <td id="td_bio_text">
-                    Name: Ricky Indra Djunawan <br>
-                    Gender: Male <br>
-                    Permanent Address: Jl. Surya Utama Blok IIN/8, Kedoya Utara, Jakarta Barat, Jakarta. Postal Code: 11520 <br>
-                    Contact Number: (+62)851 3240 0088 <br>
-                    E-mail Address: ricky.indra@hotmail.com <br>
-                    Nationality: Indonesia <br>
-                    Place/Date of birth: Jakarta / December 6th 1992 <br>
-                </td>
-            </tbody>
-        </table>
-
-
-    </p>
-
-
-
-<h2 class="h2_title" id="educational_background">
-    Educational Background
-</h2>
-
-<h3 class="h3_title">
-    Formal Education
-</h3>
-<p>
-    <table class="education_tb">
-        <thead>
-            <tr>
-                <th class="education_tbh">Level</th>
-                <th class="education_tbh">Place</th>
-                <th class="education_tbh">Year</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="education_tbd">Kindergarten</td>
-                <td class="education_tbd">TK Kemurnian II, Jakarta</td>
-                <td class="education_tbd">1996-1999</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Elementary School</td>
-                <td class="education_tbd">SD Kemurnian II, Jakarta</td>
-                <td class="education_tbd">1999-2005</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Junior High School</td>
-                <td class="education_tbd">SMP IPEKA Tomang II, Jakarta</td>
-                <td class="education_tbd">2005-2008</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Senior High School</td>
-                <td class="education_tbd">SMA IPEKA Tomang II, Jakarta</td>
-                <td class="education_tbd">2008-2009</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Senior High School</td>
-                <td class="education_tbd">SMA Ketapang II, Jakarta</td>
-                <td class="education_tbd">2009-2011</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Undergraduate Degree</td>
-                <td class="education_tbd">Universitas Indonesia, Depok</td>
-                <td class="education_tbd">2011-2016</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Graduate Degree (Master)</td>
-                <td class="education_tbd">National Taiwan University of Science and Technology, Taipei</td>
-                <td class="education_tbd">2018-Present</td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-
-<h3 class="h3_title">
-    Informal Education
-</h3>
-<p>
-    <table class="education_tb">
-        <thead>
-            <tr>
-                <th class="education_tbh">Type</th>
-                <th class="education_tbh">Place</th>
-                <th class="education_tbh">Year</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="education_tbd">English Language</td>
-                <td class="education_tbd">Eloquensi Language Center, Jakarta</td>
-                <td class="education_tbd">2004-2011</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">English Language</td>
-                <td class="education_tbd">Self study</td>
-                <td class="education_tbd">2011-Present</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Chinese Language</td>
-                <td class="education_tbd">Mandarin Study and Culture Center - MingChuan University, Taipei</td>
-                <td class="education_tbd">2017-2018</td>
-            </tr>
-            <tr>
-                <td class="education_tbd">Badminton</td>
-                <td class="education_tbd">PB Bintang, Jakarta</td>
-                <td class="education_tbd">2005-2011</td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-
-<h2 class="h2_title" id="skills_interests">
-    Skills and Interests
-</h2>
-<h3 class="h3_title">
-    Language
-</h3>
-<p>
-    <ol>
-        <li>Indonesian Language - Mother Language</li>
-        <li>English Language - Intermediate</li>
-        <li>Chinese Language - Novice</li>
-    </ol>
-</p>
-<h3 class="h3_title">
-    Mechanical Engineering
-</h3>
-<p>
-    Specialty
-    <ol>
-        <li>Production and Manufacturing</li>
-        <li>Quality Control and Analysis</li>
-        <li>Micro Fabrication Technology</li>
-    </ol>
-</p>
-<p>
-    Tools
-    <ol>
-        <li>Autodesk Inventor</li>
-        <li>Solidworks</li>
-        <li>UG Siemens NX</li>
-    </ol>
-</p>
-<h3 class="h3_title">
-    Computer Programming
-</h3>
-<p>
-    Specialty
-    <ol>
-        <li>Data Analysis</li>
-        <li>Machine Learning</li>
-        <li>Digital Image Processing</li>
-    </ol>
-</p>
-<p>
-    Tools
-    <ol>
-        <li>Python</li>
-        <li>C/C++</li>
-        <li>Javascript</li>
-    </ol>
-</p>
-<h3 class="h3_title">
-    Other Skills
-</h3>
-<p>
-    <ol>
-        <li>Ms. Office (Word, Excel, PowerPoint, etc)</li>
-        <li>Adobe (Photoshop, Illustrator)</li>
-        <li>HTML & CSS</li>
-    </ol>
-</p>
-
-
-<h2 class="h2_title" id="experiences">
-    Experiences
-</h2>
-<h3 class="h3_title">
-    Work
-</h3>
-<p>
-<table class="exp_tb">
-    <thead>
-        <tr>
-            <th class="exp_tbh">Year</th>
-            <th class="exp_tbh">Place</th>
-            <th class="exp_tbh">Position</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="exp_tbd">2014</td>
-            <td class="exp_tbd">PT. SANWA ENGINEERING INDONESIA</td>
-            <td class="exp_tbd">Internship</td>
-        </tr>
-        <tr>
-            <td class="exp_tbd">2015</td>
-            <td class="exp_tbd">Micro Fabrication Laboratory (Micro-milling) UI</td>
-            <td class="exp_tbd">Student/Researcher</td>
-        </tr>
-        <tr>
-            <td class="exp_tbd">2018</td>
-            <td class="exp_tbd">PT. Telkomsel Telin Taiwan</td>
-            <td class="exp_tbd">Part-timer</td>
-        </tr>
-        <tr>
-            <td class="exp_tbd">2018</td>
-            <td class="exp_tbd">Computer Graphic Laboratory NTUST</td>
-            <td class="exp_tbd">Student/Researcher</td>
-        </tr>
-        <tr>
-            <td class="exp_tbd">2020 - Present</td>
-            <td class="exp_tbd">PT. SAMA SUKSES SADAYA</td>
-            <td class="exp_tbd">Production & QC Supervisor</td>
-        </tr>
-    </tbody>
-</table>
-</p>
-<h3 class="h3_title">
-    Organization
-</h3>
-<p>
-    <table class="exp_tb">
-        <thead>
-            <tr>
-                <th class="exp_tbh">Year</th>
-                <th class="exp_tbh">Organization</th>
-                <th class="exp_tbh">Position</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="exp_tbd">2011</td>
-                <td class="exp_tbd">Malam Keakraban (Makrab) KMBUI</td>
-                <td class="exp_tbd">Supervisor of Foods and Beverages</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2012</td>
-                <td class="exp_tbd">Children's Day TIS</td>
-                <td class="exp_tbd">Staff of Supply and Equipment</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2012</td>
-                <td class="exp_tbd">Kathina Day KMBUI</td>
-                <td class="exp_tbd">Staff of Publication</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2012- 2013</td>
-                <td class="exp_tbd">PARAMITA Magazine</td>
-                <td class="exp_tbd">Head of Design Team</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2013</td>
-                <td class="exp_tbd">Journalism Training PARAMITA</td>
-                <td class="exp_tbd">Supervisor of Supply and Equipment</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2013</td>
-                <td class="exp_tbd">Freshmen Student Admission</td>
-                <td class="exp_tbd">Supervisor of Publication and Documentation</td>
-            </tr>
-            <tr>
-                <td class="exp_tbd">2018-2019</td>
-                <td class="exp_tbd">INDONESIAN CULTURE EXHIBITION NTUST</td>
-                <td class="exp_tbd">Head of Registration and Souvenir Division</td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-</div>
-
-<a onclick="topFunction()" id="back_top_button"><img src="images/back_to_top.png" width="50" height="50"></a>
-<script>
-    var myButton = document.getElementById("back_top_button");
-    window.onscroll = function(){scrollFunction()};
-
-    function scrollFunction()
-    {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-        {myButton.style.display = "block";} else {myButton.style.display = "none";}
-    }
-
-    function topFunction()
-    {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
-
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("skillset-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>
