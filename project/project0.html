@@ -34,6 +34,9 @@
     </script>
 
     <link rel="stylesheet" href="../css/background.css">
+
+    <!--project dependencies-->
+    <link rel="stylesheet" href="../js/projects/project0/style.css">
 </head>
 <body>
     <div class="background" style="background-image: url('../images/background/5305323.jpg');"></div>
@@ -44,9 +47,14 @@
         </div>
     </div>
     <div class="container">
-        <div id="content">
-            <canvas width="device-width" height="device-height" style="background-color: white;"></canvas>
+        <div class="sudoku-solver">
+            <div id="puzzle"></div>
+            <button type="button" id="solve-button" class="btn btn-success">Solve</button>
+            <button type="button" id="clear-button" class="btn btn-danger">Clear</button>
         </div>
+
     </div>
+
+    <script type="module" defer src="../js/projects/project0/app.js"></script>
 </body>
 </html>
