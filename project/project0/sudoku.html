@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ricky's Projects">
+    <meta name="keywords" content="Ricky, Ricky Indra, Ricky Indra Djunawan">
+    <meta name="author" content="Ricky Indra Djunawan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <link rel="shortcut icon" type="image" href="../../images/dino.ico"/>
+    <title>Ricky Indra Djunawan - Projects</title>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Popper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha512-Ua/7Woz9L5O0cwB/aYexmgoaD7lw3dWe9FvXejVdgqu71gRog3oJgjSWQR55fwWx+WKuk8cl7UwA1RS6QCadFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--FontAwesome JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--FontAwesome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--static dependencies-->
+    <!--PaceJs-->
+    <script src="../../js/pace/pace.min.js"></script>
+    <link rel="stylesheet" href="../../js/pace/flash.css" type="text/css">
+    <script>
+        Pace.options = {
+            ajax: false
+        }
+    </script>
+		<!--background-->
+    <link rel="stylesheet" href="../../css/background.css">
+
+    <!--project dependencies-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="background" style="background-image: url('../../images/background/5305323.jpg');"></div>
+
+    <div class="container m-3">
+        <div>
+            <a href="../project_menu.html"><button class="btn btn-primary">Back</button></a>
+        </div>
+    </div>
+    <div class="row justify-content-center" width="100%">
+        <div id="div_difficulty" class="text-center col-6">
+            <h4>Choose a difficulty</h4>
+            <input type="radio" id="dif-easy" name="difficulty" value="easy" checked="checked">
+            <label for="dif-easy">Easy</label>
+            <input type="radio" id="dif-medium" name="difficulty" value="medium">
+            <label for="dif-medium">Medium</label>
+            <input type="radio" id="dif-hard" name="difficulty" value="hard">
+            <label for="dif-hard">Hard</label>
+        </div>
+        <div id="timer" class="text-center col-6">
+            <h4>Time</h4>
+            <span id="timer"><label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label></span>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center my-3" id="buttons-div">
+        <button type="button" id="start-button" class="btn btn-primary mx-3" onclick="startGame()">Start</button>
+        <button type="button" id="check-button" class="btn btn-success mx-3" onclick="checkPuzzle()">Check</button>
+    </div>
+    <div class="container">
+        <div class="row my-3" id="puzzle-div">
+            <div class="col d-flex justify-content-center">
+                <div class="sudoku">
+                    <div id="puzzle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" defer src="./app.js"></script>
+    <script src="./solver.js"></script>
+
+    <script>
+        var isGameRunning = false;
+        var hoursLabel = document.getElementById('hours')
+        var minutesLabel = document.getElementById('minutes')
+        var secondsLabel = document.getElementById('seconds')
+        var totalSeconds = 0
+        var intervalID
+        var puzzle
+        var puzzleAnswer
+
+        function countUp(){
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds % 60);
+            minutesLabel.innerHTML = pad(parseInt((totalSeconds / 60) % 60));
+            hoursLabel.innerHTML = pad(parseInt(totalSeconds / 3600));
+        }
+
+        function pad(val){
+            return val > 9 ? val : "0" + val;
+        }
+
+        function boardInput(){
+            let inputArray = []
+
+            const inputElement = document.getElementById('puzzle').getElementsByTagName('input');
+            for(i = 0; i < inputElement.length; i++){
+                if(inputElement[i].value){
+                    inputArray.push(parseInt(inputElement[i].value))
+                } else {
+                    inputArray.push(0)
+                }
+            }
+
+            const nestedArray = [];
+            for(let i = 0; i < inputArray.length; i += 9){
+                nestedArray.push(inputArray.slice(i, i + 9));
+            }
+
+            return nestedArray;
+        }
+
+        function fillBoard(array){
+            const inputElement = document.getElementById('puzzle').getElementsByTagName('input');
+            // for clearing the board
+            for(i = 0; i < inputElement.length; i++){
+                $('#cell-'+(i+1)).val('').trigger('change');
+                $('#cell-'+(i+1)).removeClass('readOnlyCell');
+                $('#cell-'+(i+1)).prop('readonly', false);
+            }
+
+            for(i = 0; i < inputElement.length; i++){
+                if(array[i] != 0){
+                    $('#cell-'+(i+1)).val(array[i]).trigger('change');
+                    $('#cell-'+(i+1)).addClass('readOnlyCell');
+                    $('#cell-'+(i+1)).prop('readonly', true);
+                }
+            }
+        }
+
+        function startGame(){
+            let difficulty = $('input[name="difficulty"]:checked').val();
+            if(difficulty === 'easy'){
+                sudoku= generateSudokuPuzzle(3);
+            } else if(difficulty === 'medium'){
+                sudoku = generateSudokuPuzzle(4);
+            } else {
+                sudoku = generateSudokuPuzzle(5);
+            }
+            puzzle = sudoku.puzzle;
+            puzzleAnswer = sudoku.answer;
+            puzzleArray = puzzle.flat();
+            fillBoard(puzzleArray);
+            clearInterval(intervalID);
+            isGameRunning = true;
+            totalSeconds = 0
+            if(isGameRunning){
+                intervalID = setInterval(countUp, 1000);
+            } else {
+                clearInterval(intervalID);
+            }
+        }
+
+        function checkPuzzle(){
+            let userAnswer = boardInput();
+            for (let i = 0; i < userAnswer.length; i++) {
+                for (let j = 0; j < userAnswer[i].length; j++) {
+                    if (userAnswer[i][j] !== puzzleAnswer[i][j]) {
+                        if(userAnswer[i][j] !== 0){
+                            if(solveSudoku(userAnswer)){
+                                $('#cell-'+((i*9)+(j+1))).removeClass('incorrect');
+                                console.log('cell-'+((i*9)+(j+1))+' not same as solution but it\'s possible')
+                            } else {
+                                $('#cell-'+((i*9)+(j+1))).addClass('incorrect');
+                                console.log('cell-'+((i*9)+(j+1))+' is wrong')
+                            }
+                        } else {
+                            $('#cell-'+((i*9)+(j+1))).addClass('incorrect');
+                            console.log('cell-'+((i*9)+(j+1))+' is wrong')
+                        }
+                    } else {
+                        $('#cell-'+((i*9)+(j+1))).removeClass('incorrect');
+                    }
+                }
+            }
+
+            if(puzzleComplete()){
+                clearInterval(intervalID);
+                isGameRunning = false;
+                alert(`Congratulation! You managed to finish the puzzle after ${hoursLabel.textContent} hours ${minutesLabel.textContent} minutes and ${secondsLabel.textContent} seconds`) 
+            }
+        }
+
+        function puzzleComplete(){
+            for(i = 0; i < 81; i++){
+                if($('#cell-'+(i+1)).hasClass('incorrect')){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('.numeric_input').on('input', function(){
+                $(this).val($(this).val().replace(/[^0-9]/g, '').substring(0, 1));
+            });
+        })
+    </script>
+</body>
+</html>

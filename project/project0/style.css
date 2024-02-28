@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-spacing: 0;
+}
+
+#puzzle{
+    width: 450px;
+    height: 450px;
+}
+
+#puzzle input{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border: 1px silver solid;
+}
+
+#puzzle input:nth-child(3n):not(:nth-child(9n)){
+    border-right: 3px black solid;
+}
+
+#puzzle input:nth-child(19){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(20){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(21){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(22){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(23){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(24){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(25){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(26){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(27){
+    border-bottom: 3px black solid;
+}
+
+#puzzle input:nth-child(46){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(47){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(48){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(49){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(50){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(51){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(52){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(53){
+    border-bottom: 3px black solid;
+}
+#puzzle input:nth-child(54){
+    border-bottom: 3px black solid;
+}
+
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#puzzle input.incorrect{
+    color: red;
+    background-color: rgb(255, 150, 150);
+}
+
+#puzzle input.readOnlyCell{
+    background-color: rgb(235, 235, 235);
+}
